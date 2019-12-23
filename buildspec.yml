@@ -23,7 +23,7 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/ftc-client-1.0-SNAPSHOT.jar
+    - target/lambda-java-api-example-1.0-SNAPSHOT.jar
     - appspec.yml
     - outputTemplate.yml
   discard-paths: yes
