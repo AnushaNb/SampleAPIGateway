@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn test
-      - export BUCKET=my-bucket-for-test
+      - export BUCKET=codepipeline-us-east-1-364734773713
       - aws cloudformation package --template-file buildspec.yml --s3-bucket $BUCKET --output-template-file outputTemplate.yml
     finally:
       - echo THE PATH WORK IS !!!
