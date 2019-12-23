@@ -24,6 +24,6 @@ phases:
 artifacts:
   files:
     - target/ftc-client-1.0-SNAPSHOT.jar
-    - template.yaml
+    - appspec.yaml
     - outputtemplate.yaml
   discard-paths: yes
