@@ -1,3 +1,4 @@
+version: 0.0
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
@@ -5,7 +6,7 @@ Resources:
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: LambdaJavaAPI.handleRequest
+      Handler: com.testapi.aws.LambdaJavaAPI::handleRequest
       Runtime: openjdk8
       CodeUri: ./
       Events:

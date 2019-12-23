@@ -1,10 +1,29 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
-        java : openjdk8
+      java: openjdk8
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn test
+      - export BUCKET=my-bucket-for-test
+      - aws cloudformation package --template-file template.yaml --s3-bucket $BUCKET --output-template-file outputtemplate.yaml
+    finally:
+      - echo THE PATH WORK IS !!!
+      - pwd
+      - echo The list of file is !!
+      - ls
+      - echo CODE BUILD SRC DIRECTORY
+      - echo $CODEBUILD_SRC_DIR
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
 artifacts:
-  type: zip
   files:
-    - appspec.yml
-    - outputtemplate.yml
+    - target/ftc-client-1.0-SNAPSHOT.jar
+    - appspec.yaml
+    - outputtemplate.yaml
+  discard-paths: yes
