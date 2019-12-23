@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: com.testapi.aws.LambdaJavaAPI::handleRequest
       Runtime: java8
-      CodeUri: s3://codepipeline-us-east-1-364734773713/SampleApigateway2/BuildArtif/0mrTAkl
+      CodeUri: s3://codepipeline-us-east-1-364734773713/SampleApigateway2/BuildArtif/0mrTAkl/target
       Events:
         MyTimeApi:
           Type: Api
