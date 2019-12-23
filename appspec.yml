@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
   TimeFunction:
-    Type: AWS::Serverless::Api
+    Type: AWS::Serverless::Function
     Properties:
       Handler: com.testapi.aws.LambdaJavaAPI::handleRequest
       Runtime: openjdk8
@@ -12,5 +12,5 @@ Resources:
         MyTimeApi:
           Type: Api
           Properties:
-            Path: /lambdaApi
+            Path: /TimeResource
             Method: GET
