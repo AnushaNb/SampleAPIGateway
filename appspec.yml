@@ -8,7 +8,7 @@ Resources:
       Handler: com.testapi.aws.LambdaJavaAPI::handleRequest
       Runtime: java8
       CodeUri: ./target/lambda-java-api-example-1.0-SNAPSHOT.jar
-      Role: arn:aws:iam::515016729357:role/s3uploadlambda-role
+      Role: arn:aws:iam::859181559017:role/s3uploadlambda-role
       Events:
         MyTimeApi:
           Type: Api
